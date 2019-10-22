@@ -1,8 +1,9 @@
 <input type="text" [(ngModel)]="keyword" placeholder="Search box">
-<button type="button" (click)="searchVideos()">Search</button>
+<button mat-raised-button type="button" (click)="searchVideos()">Search</button>
 
 <div *ngFor="let video of videoList; let i = index">
     <img src={{video.snippet.thumbnails.high.url}}>
+    <!-- This anchor tag below will turn into a (click) event where I pull up an iframe of the video -->
     <a [href]="'https://www.youtube.com/watch?v=' + video.id.videoId">ClickToSearch</a>
     <p> {{ video.snippet.description }} </p>
 </div>
