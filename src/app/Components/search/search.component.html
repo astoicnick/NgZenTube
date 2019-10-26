@@ -2,8 +2,14 @@
 <button mat-raised-button type="button" (click)="searchVideos()">Search</button>
 
 <div *ngFor="let video of videoList; let i = index">
-    <img src={{video.snippet.thumbnails.high.url}}>
+    <!-- <img src={{video.snippet.thumbnails.high.url}}> -->
+    <div *ngIf="video.videoId">
+        <!-- <iframe width="560" height="315" [src]="VideoIdIframeURL(video.videoId)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <a routerLink="watch">ClickmeToWatch</a>
+        <!-- <a [href]='videoIdURL()'>ClickToLoadIndividualVideo</a> -->
+        <!-- 'https://www.youtube.com/watch?v=' + video.videoId -->
+        <!-- 'https://www.youtube.com/embed/' + video.videoId -->
+    </div>
     <!-- This anchor tag below will turn into a (click) event where I pull up an iframe of the video -->
-    <a [href]="'https://www.youtube.com/watch?v=' + video.id.videoId">ClickToSearch</a>
     <p> {{ video.snippet.description }} </p>
 </div>

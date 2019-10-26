@@ -7,7 +7,7 @@ import { SearchComponent } from './Components/search/search.component';
 import { MaterialModule } from './MaterialImports';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { WatchVideoComponent } from './Services/watch-video/watch-video.component';
+import { WatchVideoComponent } from './Components/watch-video/watch-video.component';
 
 @NgModule({
   declarations: [
